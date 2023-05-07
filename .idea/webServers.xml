@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a48f95db-8583-4fbf-b9ea-c6775fb78ca3" name="school server">
+        <fileTransfer rootFolder="/home/yanze/test/" accessType="SFTP" host="10.128.201.127" port="22" sshConfigId="c975bc5a-0bea-4b39-ab8d-7e3549928f9a" sshConfig="yanze@10.128.201.127:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

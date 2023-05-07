@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8fcba628-8fb7-4734-b766-c47759b257eb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2PKjbSKeJbvWtlN1bQ3P5A1VbwB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LeNet-5-MNIST-PyTorch" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fcba628-8fb7-4734-b766-c47759b257eb" name="Default Changelist" comment="" />
+      <created>1683212738173</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683212738173</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="475" y="162" key="FileChooserDialogImpl" timestamp="1683348079898">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="634" y="219" key="FileChooserDialogImpl/-767.1440.1280.690/0.0.1707.920@0.0.1707.920" timestamp="1683276575789" />
+    <state x="475" y="162" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1683348079898" />
+    <state x="268" y="0" key="SettingsEditor" timestamp="1683347373759">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="357" y="106" key="SettingsEditor/-767.1440.1280.690/0.0.1707.920@0.0.1707.920" timestamp="1683275594629" />
+    <state x="268" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1683347373759" />
+    <state x="347" y="297" key="com.intellij.ide.util.TipDialog" timestamp="1683346263415">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="347" y="297" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1683346263415" />
+  </component>
+</project>
