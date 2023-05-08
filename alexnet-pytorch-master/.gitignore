@@ -1,0 +1,14 @@
+## Python
+venv/
+.venv/
+alexnet_data_in/
+tiny-imagenet-200.zip
+VOCdevkit/
+VOCtrainval_11-May-2012.tar
+
+## c3dl-specific
+run.sh
+train.sh
+alexnet.json
+user_dev_workspace/
+log.log

@@ -34,6 +34,8 @@ if len(sys.argv) == 2:
     t = time.localtime()
     if t.tm_hour >= 16:
         tm_mday = t.tm_mday + 1
+    else:
+        tm_mday = t.tm_mday
     mylog = "./log/LeNet_%d_%d_%d_%d_%s.txt" % (t.tm_mon, tm_mday, (t.tm_hour + 8) % 24, t.tm_min, sys.argv[1])
 
 net = LeNet5(mylog).to(device)
@@ -43,18 +45,18 @@ criterion = nn.CrossEntropyLoss()
 # 优化器
 optimizer = optim.Adam(net.parameters(), lr=2e-3)
 
-cur_batch_win = None
-cur_batch_win_opts = {
-    'title': 'Epoch Loss Trace',
-    'xlabel': 'Batch Number',
-    'ylabel': 'Loss',
-    'width': 1200,
-    'height': 600,
-}
+# cur_batch_win = None
+# cur_batch_win_opts = {
+#     'title': 'Epoch Loss Trace',
+#     'xlabel': 'Batch Number',
+#     'ylabel': 'Loss',
+#     'width': 1200,
+#     'height': 600,
+# }
 
 
 def train(epoch):
-    global cur_batch_win
+    # global cur_batch_win
     net.train()
     loss_list, batch_list = [], []
     with open(mylog, "a+") as f:
