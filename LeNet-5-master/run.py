@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 import onnx
 import sys
 import time
+from modelsize_estimate import modelsize
 
 # viz = visdom.Visdom()
 
@@ -39,7 +40,7 @@ if len(sys.argv) == 2:
     mylog = "./log/LeNet_%d_%d_%d_%d_%s.txt" % (t.tm_mon, tm_mday, (t.tm_hour + 8) % 24, t.tm_min, sys.argv[1])
 
 net = LeNet5(mylog).to(device)
-
+modelsize()
 # 损失函数（交叉熵）
 criterion = nn.CrossEntropyLoss()
 # 优化器
