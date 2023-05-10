@@ -11,15 +11,30 @@ def modelsize(model, input, type_size=4):
     input_ = input.clone()
     input_.requires_grad_(requires_grad=False)
 
-    mods = list(model.modules())
+    # 把模型逐层取出
+    mods = list(model.children())
+    # for i, m in enumerate(model.children()):
+    #     print(i)
+    #     print(m)
     out_sizes = []
 
-    for i in range(1, len(mods)):
+    c2_temp = None
+    for i in range(len(mods)):
         m = mods[i]
         if isinstance(m, nn.ReLU):
             if m.inplace:
                 continue
-        out = m(input_)
+        if i == 1:
+            c2_temp = m(input_)
+            out = m(input_)
+        elif i == 2:
+            out += c2_temp
+        elif i == 4:
+            input_ = input_.flatten(start_dim=1)
+            out = m(input_)
+        else:
+            out = m(input_)
+        # print(out.shape)
         out_sizes.append(np.array(out.size()))
         input_ = out
 

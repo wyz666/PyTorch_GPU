@@ -95,19 +95,19 @@ class LeNet5(nn.Module):
     def forward(self, img):
         with open(self.filename, "a+") as f:
             output = self.c1(img)
-            f.write("经过c1:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
+            f.write("c1:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
             x = self.c2_1(output)
-            f.write("经过c2_1:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
+            # f.write("经过c2_1:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
             output = self.c2_2(output)
-            f.write("经过c2_2:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
+            # f.write("经过c2_2:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
             output += x
-            f.write("经过c2:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
+            f.write("c2:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
             output = self.c3(output)
-            f.write("经过c3:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
+            f.write("c3:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
             output = output.view(img.size(0), -1)
             output = self.f4(output)
-            f.write("经过f4:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
+            f.write("f4:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
             output = self.f5(output)
-            f.write("经过f5:%0.3f\t" % (torch.cuda.memory_allocated()/1000000))
-            f.write("fw显存峰值:%0.3f\t" % (torch.cuda.max_memory_allocated() / 1000000))
+            f.write("f5:%0.3fMB\t" % (torch.cuda.memory_allocated()/1000000))
+            f.write("fw显存峰值:%0.3fMB\n" % (torch.cuda.max_memory_allocated() / 1000000))
         return output
